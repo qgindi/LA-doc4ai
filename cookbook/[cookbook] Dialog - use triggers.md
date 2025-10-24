@@ -1,0 +1,43 @@
+# Dialog - use triggers
+
+How to create/show a window and then use `Au.Triggers.ActionTriggers` in the same script? You may encounter these problems:
+
+1. You don't know where and in what order to call `ShowDialog`, `Au.Triggers.ActionTriggers.Run`, etc.
+2. `ShowDialog` and `ActionTriggers.Run` both run all the time, and therefore cannot run in the same thread simultaneously, unless `ShowDialog` is called from a trigger action.
+3. The script may not exit when the window closed, because `ActionTriggers.Run` is still running.
+4. In trigger actions you cannot use WPF window functions because they run in another thread.
+
+```
+using Au.Triggers;
+using System.Windows;
+using System.Windows.Controls;
+```
+
+A good and easy way - run triggers in another thread. And set option to execute trigger actions in the primary thread.
+
+```
+//build window
+var b = new wpfBuilder("Window");
+b.R.AddOkCancel();
+b.End();
+
+//set triggers
+ActionTriggers Triggers = new();
+Triggers.Options.ThreadThis(); //let trigger actions run in this thread
+var hk = Triggers.Hotkey;
+hk["Ctrl+Shift+L"] = o => { b.Window.WindowState = WindowState.Minimized; };
+hk["Ctrl+Shift+K"] = o => { b.Window.WindowState = WindowState.Normal; };
+
+//run triggers and show window
+run.thread(() => { Triggers.Run(); });
+if (!b.ShowDialog()) return;
+```
+
+Or you may want to use `Show` instead of `ShowDialog`. It does not wait. The "build window" and "set triggers" parts are the same. The "run triggers and show window" part can be like this:
+
+```
+b.OkApply += o => { print.it("OK"); };
+b.Window.Closed += (_, _) => { Triggers.Stop(); };
+b.Window.Show();
+Triggers.RunThread();
+```

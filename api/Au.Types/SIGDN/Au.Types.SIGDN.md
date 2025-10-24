@@ -1,0 +1,22 @@
+# Enum `Au.Types.SIGDN`
+
+API `SIGDN`
+
+```
+public enum SIGDN : uint
+```
+
+### Fields
+
+| Name | Description |
+| --- | --- |
+| DESKTOPABSOLUTEEDITING |  |
+| DESKTOPABSOLUTEPARSING |  |
+| FILESYSPATH |  |
+| NORMALDISPLAY |  |
+| PARENTRELATIVE |  |
+| PARENTRELATIVEEDITING |  |
+| PARENTRELATIVEFORADDRESSBAR |  |
+| PARENTRELATIVEFORUI |  |
+| PARENTRELATIVEPARSING |  |
+| URL |  |

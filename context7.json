@@ -1,0 +1,6 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "LibreAutomate documentation",
+  "description": "LA-doc4ai provides the LibreAutomate documentation in Markdown format. LibreAutomate is a C# script editor and automation library for Windows.",
+  "branch": "main",
+}

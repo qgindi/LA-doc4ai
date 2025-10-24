@@ -1,0 +1,106 @@
+# Enum `Au.Types.StockIcon`
+
+See `Au.icon.stock`, `SHSTOCKICONID`.
+
+```
+public enum StockIcon
+```
+
+### Fields
+
+| Name | Description |
+| --- | --- |
+| APPLICATION |  |
+| AUDIOFILES |  |
+| AUTOLIST |  |
+| CLUSTEREDDRIVE |  |
+| DELETE |  |
+| DESKTOPPC |  |
+| DEVICEAUDIOPLAYER |  |
+| DEVICECAMERA |  |
+| DEVICECELLPHONE |  |
+| DEVICEVIDEOCAMERA |  |
+| DOCASSOC |  |
+| DOCNOASSOC |  |
+| DRIVE35 |  |
+| DRIVE525 |  |
+| DRIVEBD |  |
+| DRIVECD |  |
+| DRIVEDVD |  |
+| DRIVEFIXED |  |
+| DRIVEHDDVD |  |
+| DRIVENET |  |
+| DRIVENETDISABLED |  |
+| DRIVERAM |  |
+| DRIVEREMOVE |  |
+| DRIVEUNKNOWN |  |
+| ERROR |  |
+| FIND |  |
+| FOLDER |  |
+| FOLDERBACK |  |
+| FOLDERFRONT |  |
+| FOLDEROPEN |  |
+| HELP |  |
+| IMAGEFILES |  |
+| INFO |  |
+| INTERNET |  |
+| KEY |  |
+| LINK |  |
+| LOCK |  |
+| MAX_ICONS |  |
+| MEDIAAUDIODVD |  |
+| MEDIABDR |  |
+| MEDIABDRE |  |
+| MEDIABDROM |  |
+| MEDIABLANKCD |  |
+| MEDIABLURAY |  |
+| MEDIACDAUDIO |  |
+| MEDIACDAUDIOPLUS |  |
+| MEDIACDBURN |  |
+| MEDIACDR |  |
+| MEDIACDROM |  |
+| MEDIACDRW |  |
+| MEDIACOMPACTFLASH |  |
+| MEDIADVD |  |
+| MEDIADVDPLUSR |  |
+| MEDIADVDPLUSRW |  |
+| MEDIADVDR |  |
+| MEDIADVDRAM |  |
+| MEDIADVDROM |  |
+| MEDIADVDRW |  |
+| MEDIAENHANCEDCD |  |
+| MEDIAENHANCEDDVD |  |
+| MEDIAHDDVD |  |
+| MEDIAHDDVDR |  |
+| MEDIAHDDVDRAM |  |
+| MEDIAHDDVDROM |  |
+| MEDIAMOVIEDVD |  |
+| MEDIASMARTMEDIA |  |
+| MEDIASVCD |  |
+| MEDIAVCD |  |
+| MIXEDFILES |  |
+| MOBILEPC |  |
+| MYNETWORK |  |
+| NETWORKCONNECT |  |
+| PRINTER |  |
+| PRINTERFAX |  |
+| PRINTERFAXNET |  |
+| PRINTERFILE |  |
+| PRINTERNET |  |
+| RECYCLER |  |
+| RECYCLERFULL |  |
+| RENAME |  |
+| SERVER |  |
+| SERVERSHARE |  |
+| SETTINGS |  |
+| SHARE |  |
+| SHIELD |  |
+| SLOWFILE |  |
+| SOFTWARE |  |
+| STACK |  |
+| STUFFEDFOLDER |  |
+| USERS |  |
+| VIDEOFILES |  |
+| WARNING |  |
+| WORLD |  |
+| ZIPFILE |  |

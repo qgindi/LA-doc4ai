@@ -1,0 +1,69 @@
+# Find window, controls, activate
+
+To create `Au.wnd.find` code can be used:
+
+- Tools in the **Code** menu: **Find window** (`Ctrl+Shift+W`), **Input recorder**.
+- Hotkey `Ctrl+Shift+Q`.
+- Snippet `winFindSnippet`. You can see window properties in panel **Mouse**.
+
+Find window and create variable *w1* that contains window handle. Window name must end with `"- Notepad"`; class name must be `"Notepad"`. Can wait/retry max 1 s; exception if not found. Activate when found.
+
+```
+var w1 = wnd.find(1, "*- Notepad", "Notepad");
+w1.Activate();
+```
+
+Find window with no name, class name `"Shell_TrayWnd"`, program `"explorer.exe"`. Exit if not found.
+
+```
+var w2 = wnd.find("", "Shell_TrayWnd", "explorer.exe");
+if (w2.Is0) return;
+```
+
+Function `Au.wnd.findOrRun` opens window if does not exist. Also activates.
+
+```
+var w3 = wnd.findOrRun("* Notepad", run: () => run.it("notepad.exe")); //if not found, run "notepad.exe"
+print.it(w3);
+```
+
+Get the active window.
+
+```
+var w4 = wnd.active;
+```
+
+Get the mouse window.
+
+```
+var w5 = wnd.fromMouse(WXYFlags.NeedWindow);
+//w5 = wnd.fromXY(mouse.xy, WXYFlags.NeedWindow); //the same
+```
+
+Find all windows classnamed `"Notepad"` of program `"notepad.exe"`.
+
+```
+var a1 = wnd.findAll(cn: "Notepad", of: "notepad.exe");
+foreach (var v in a1) {
+	print.it(v);
+}
+```
+
+Get all visible windows.
+
+```
+var a2 = wnd.getwnd.allWindows(onlyVisible: true);
+foreach (var v in a2) {
+	print.it(v);
+}
+```
+
+A window can contain child windows, also known as *controls*. This code finds a child window. Exception if not found. When found, moves the mouse cursor to its center.
+
+```
+var w6 = wnd.find(1, "*File Explorer", "CabinetWClass");
+var c1 = w6.Child(1, cn: "SysTreeView32", id: 100); // "Navigation Pane"
+mouse.move(c1);
+```
+
+To create `Au.wnd.Child` code can be used the same tools as for `wnd.find`.

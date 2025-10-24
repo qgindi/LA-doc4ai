@@ -1,0 +1,38 @@
+# File properties - Table of contents
+
+- Role (group of properties)
+    - `role` - `miniProgram`, `exeProgram`, `editorExtension`, `classFile` or `classLibrary`.
+- Run (group of properties)
+    - `testScript` - a script to run to test this not-directly-executable class file.
+    - `ifRunning` - whether/how to launch this script if it's already running.
+    - `uac` - run this script as admin or not.
+- Compile (group of properties)
+    - `optimize` - release/debug configuration.
+    - `define` - preprocessor symbols.
+    - `warningLevel` - disable groups of warnings.
+    - `noWarnings` - disable specified warnings.
+    - `nullable` - C# nullable context.
+    - `testInternal` - use internal members of specified assemblies.
+    - `preBuild` - a script to run before compiling.
+    - `postBuild` - a script to run after compiling.
+- Assembly (group of properties)
+    - `outputPath` - output directory of compiled exe/dll files.
+    - `icon` - icon of compiled exe file.
+    - `manifest` - manifest of compiled exe file.
+    - `sign` - strong-name signing file.
+    - `console` - create console app.
+    - `platform` - platform of compiled exe file (`x64`, `arm64` or `x86`).
+    - `xmlDoc` - whether to create an XML documentation file when compiling this library.
+- Add reference (group of properties)
+    - `r` (button **Library**) - .NET assembly reference.
+    - `nuget` (button **NuGet**) - NuGet package reference.
+    - `com` (buttons **COM** and **...**) - COM interop assembly reference.
+    - `pr` (button **Project**) - library project reference.
+- Add file (group of properties)
+    - `c` (button **Class file**) - add a C# file to the compilation.
+    - `resource` (button **Resource**) - add a resource from a file.
+    - `file` (button **Other file**) - make a file available at run time.
+- Rarely used properties
+    - `miscFlags` - miscellaneous rarely used flags.
+    - `noRef` - remove a default reference assembly.
+- Version info - how to add version info.
