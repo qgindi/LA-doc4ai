@@ -1,0 +1,33 @@
+# Code editor | Features
+
+- List of symbols, autocompletion
+- Bracket completion
+- Statement completion
+- Auto indentation
+- Parameter info
+- Quick info
+- Error info
+- XML documentation comments
+- Go to symbol documentation
+- Go to symbol definition (source code), base
+- Go to script, file, URL
+- Find and replace text
+- Find symbol references
+- Highlight symbol references and matching braces
+- Find symbol
+- Rename symbol
+- Outline of current file
+- Navigate back/forward
+- Bookmarks
+- Code coloring
+- Text folding
+- Separators between functions/types
+- Snippets
+- Images in code
+- Format code
+- Comment/uncomment/indent/unindent lines
+- Capture UI elements, insert regex etc, implement interface
+- Find Windows API and insert declarations
+- Drag and drop files to insert path
+- Focus
+- WPF window preview

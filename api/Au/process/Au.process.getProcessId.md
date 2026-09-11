@@ -1,0 +1,31 @@
+# Method `Au.process.getProcessId`
+
+Gets process id of the first found process of the specified program.
+
+```csharp
+public static int getProcessId(string processName, bool? fullPath = false, bool ofThisSession = false)
+```
+
+##### Parameters
+
+- *processName*  (`string`):
+  Process executable file name, like `"abc.exe"`.
+  String format:[wildcard expression](🔗).
+- *fullPath*  (`bool?`):
+  *processName*is full path.
+  If`null`, calls `Au.pathname.isFullPathExpand`.
+  Note: Fails to get full path if the process belongs to another user session, unless current process is running as administrator; also fails to get full path of some system processes.
+- *ofThisSession*  (`bool`):
+  Get processes only of this user session.
+
+##### Returns
+
+`int`
+
+0 if not found.
+
+##### Exceptions
+
+- `ArgumentException`:
+  - *processName* is `""` or `null`.
+  - Invalid wildcard expression (`"**options "` or regular expression).

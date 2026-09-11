@@ -1,0 +1,8 @@
+# Field `Au.Types.WDLArgs.msg`
+
+Current message retrieved by API `GetMessage`.
+API`MSG`.
+
+```csharp
+public MSG msg
+```
